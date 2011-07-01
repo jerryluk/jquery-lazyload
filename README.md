@@ -8,7 +8,7 @@ This plugin is modified after Mika Tuupola's lazyload which does not work in som
 
 For your HTML markup, please use data-src attribute instead of src:
 
-    <img data-src="/path_to_your_real_image">
+    <img data-src="/path_to_your_real_image" />
 
 In your Javascipt:
 
@@ -17,8 +17,11 @@ In your Javascipt:
 ##Options
 
 threshold: how close to the edge image shoudl come before it is loaded. Default is 0
+
 placeholder: placeholder image
+
 container: jQuery object of the container, default is $(window)
+
 delay: This will load the images with a small delay, such that when user scrolls down to bottom, it will skip loading some images that are not going to be seen. Default is 100
 
 Example
@@ -36,6 +39,10 @@ Example
 You can trigger the detection by triggering a "lazyload" event on the container, e.g.
 
     $("div.container").trigger("lazyload");
+    
+##License
+
+This plugin is licensed under the MIT license.
 
 Please feel free to let me know if you have any questions!
   
