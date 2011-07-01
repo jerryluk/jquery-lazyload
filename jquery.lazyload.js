@@ -29,7 +29,7 @@
         function checkElements(event) {
             var counter = 0;
             elements.each(function() {
-                if ($(this).is(":visible") && $(this).data("src")){
+                if ($(this).data("src") && $(this).is(":visible")){
                   if ($.abovethetop(this, settings) ||
                   $.leftofbegin(this, settings)) {
                       /* Nothing. */
