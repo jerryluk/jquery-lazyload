@@ -19,6 +19,7 @@
             threshold: 0,
             failurelimit: 0,
             delay: 100,
+            initialDelay: 100,
             container: window
         };
 
@@ -72,7 +73,9 @@
         });
 
         /* Force initial check if images should appear. */
-        $(settings.container).trigger("lazyload");
+        setTimeout(function() {
+          $(settings.container).trigger("lazyload");
+        }, settings.initialDelay);
 
         return this;
 
