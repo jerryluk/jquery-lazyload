@@ -8,7 +8,7 @@ This plugin is modified after Mika Tuupola's lazyload which does not work in som
 
 For your HTML markup, please use data-src attribute instead of src:
 
-    <img data-src="/path_to_your_real_image" />
+    <img src="/path_to_place_holder" data-src="/path_to_your_real_image" />
 
 In your Javascipt:
 
@@ -18,7 +18,7 @@ In your Javascipt:
 
 threshold: how close to the edge image shoudl come before it is loaded. Default is 0
 
-placeholder: placeholder image
+placeholder: placeholder image, but I recommended you use put the placeholder in the markup
 
 container: jQuery object of the container, default is $(window)
 
