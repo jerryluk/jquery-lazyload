@@ -18,7 +18,7 @@
         var settings = {
             threshold: 0,
             failurelimit: 0,
-            delay: 0,
+            delay: 100,
             container: window
         },
         elements = this,
@@ -62,7 +62,7 @@
                 elementWidth = $(window).width();
             } else {
                 elementTop = $(element).offset().top;
-                elementHeight = $(element).height()
+                elementHeight = $(element).height();
                 elementLeft = $(element).offset().left;
                 elementWidth = $(element).width();
             }
@@ -71,7 +71,7 @@
                 height: elementHeight,
                 left: elementLeft,
                 width: elementWidth
-            }
+            };
         }
 
         function belowTheFold(containerOffsets, elementOffsets, settings) {
@@ -93,7 +93,7 @@
             var fold = containerOffsets.left;
             return fold >= elementOffsets.left + settings.threshold + elementOffsets.width;
         }
-
+        
         this.each(function() {
             var $this = $(this);
             $lastElement = $this;
