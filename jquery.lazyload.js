@@ -9,7 +9,7 @@
  * Modified after Mika Tuupola's lazyload:
  *   http://www.appelsiini.net/projects/lazyload
  *
- * Version:  1.0.1
+ * Version:  1.0.2
  *
  */
  (function($) {
@@ -120,7 +120,7 @@
                   timeout = setTimeout(function() {
                       checkElements();
                   },
-                  options.delay);
+                  settings.delay);
               }
             );
             /* Force initial check if images should appear. */
